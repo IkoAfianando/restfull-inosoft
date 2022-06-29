@@ -7,6 +7,89 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Laravel REST API
+
+This is a Inosoft Backend Test
+
+## Usage
+
+Change the *.env.example* to *.env* and add your database info
+
+For Mongodb, add
+```
+DB_CONNECTION=mongodb
+DB_HOST=127.0.0.1
+DB_PORT=27017
+```
+
+Create a _database.mongodb_ file in the _database_ directory
+
+```
+# Make sure the database has been created
+
+# Run the webserver on port 8000
+php artisan serve
+php artisan migrate
+```
+
+## Routes
+
+```
+@All Api endpoints can be seen in Postman Collection
+
+# Public
+POST   /api/login
+@body: email, password
+
+POST   /api/register
+@body: name, email, password, password_confirmation
+
+# Protected (token)
+
+# Table Kendaraan
+GET   /api/kendaraan
+GET   /api/kendaraan/:id
+GET   /api/kendaraan/search/{tahun_keluaran}
+
+POST   /api/kendaraan
+@body: tahun_kendaraan,warna,harga
+
+PUT   /api/kendaraan/:id
+@body: ?tahun_kendaraan, ?warna, ?harga
+
+DELETE  /api/kendaraan/:id
+
+# Table Mobil
+GET   /api/mobil
+GET   /api/mobil/:id
+GET   /api/mobil/search/{mesin}
+
+POST   /api/mobil
+@body: mesin, kapasitas_penumpang, tipe
+
+PUT   /api/mobil/:id
+@body: ?mesin, ?kapasitas_penumpang, ?tipe
+
+DELETE  /api/mobil/:id
+
+# Table Motor
+GET   /api/motor
+GET   /api/motor/:id
+GET   /api/motor/search/{mesin}
+
+POST   /api/motor
+@body: mesin, tipe_suspensi, tipe_transmisi
+
+PUT   /api/motor/:id
+@body: ?mesin, ?tipe_suspensi, ?tipe_transmisi
+
+DELETE  /api/motor/:id
+
+# Logout
+POST    /api/logout
+
+```
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
