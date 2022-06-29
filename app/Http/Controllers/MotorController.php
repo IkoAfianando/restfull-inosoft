@@ -43,4 +43,10 @@ class MotorController extends Controller
         return $motor;
     }
 
+    public function search($mesin)
+    {
+        return Motor::where('mesin', 'like', '%' . $mesin . '%')->get();
+    }
+
+
 }

@@ -10,7 +10,7 @@ class KendaraanController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Database\Eloquent\Collection|Kendaraan[]
      */
     public function index()
     {
@@ -73,5 +73,10 @@ class KendaraanController extends Controller
         $kendaraan = Kendaraan::find($id);
         $kendaraan->delete();
         return $kendaraan;
+    }
+
+    public function search($tahun_keluaran)
+    {
+        return Kendaraan::where('tahun_keluaran', 'like', '%' . $tahun_keluaran . '%')->get();
     }
 }

@@ -51,4 +51,9 @@ class MobilController extends Controller
         return $mobil;
     }
 
+    public function search($mesin)
+    {
+        return Mobil::where('mesin', 'like', '%' . $mesin . '%')->get();
+    }
+
 }

@@ -1,0 +1,843 @@
+{
+	"info": {
+		"_postman_id": "6ce7b24a-a10f-4810-9491-bac2d19ff8cc",
+		"name": "LARAVEL INOSOFT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18803644"
+	},
+	"item": [
+		{
+			"name": "KENDARAAN",
+			"item": [
+				{
+					"name": "POST KENDARAAN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tahun_keluaran",
+									"value": "2022-06-29",
+									"type": "text"
+								},
+								{
+									"key": "warna",
+									"value": "kuning",
+									"type": "text"
+								},
+								{
+									"key": "harga",
+									"value": "2000000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/kendaraan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"kendaraan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET KENDARAAN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/kendaraan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"kendaraan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET KENDARAAN by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/kendaraan/62bc67d3b2c2313e2b0ff844",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"kendaraan",
+								"62bc67d3b2c2313e2b0ff844"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET KENDARAAN?{tahun_keluaran}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/kendaraan/search/2022",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"kendaraan",
+								"search",
+								"2022"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE KENDARAAN",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tahun_kendaraan",
+									"value": "2022-12-12",
+									"type": "text"
+								},
+								{
+									"key": "warna",
+									"value": "blue",
+									"type": "text"
+								},
+								{
+									"key": "harga",
+									"value": "10000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/kendaraan/62bc67d3b2c2313e2b0ff844",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"kendaraan",
+								"62bc67d3b2c2313e2b0ff844"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE KENDARAAN",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/kendaraan/62bc674cb2c2313e2b0ff842",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"kendaraan",
+								"62bc674cb2c2313e2b0ff842"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "62bcd988a2be24bfea08cb22|zDafou8xm6laKUm08WZHp4bqVRPzqashkCJBej2k",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "MOBIL",
+			"item": [
+				{
+					"name": "POST MOBIL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "mesin",
+									"value": "diesel",
+									"type": "text"
+								},
+								{
+									"key": "kapasitas_penumpang",
+									"value": "200",
+									"type": "text"
+								},
+								{
+									"key": "tipe",
+									"value": "satya",
+									"type": "text"
+								},
+								{
+									"key": "tahun_keluaran",
+									"value": "2022-12-12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/mobil",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"mobil"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET MOBIL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "62bc7cf4dacd1b186e060e99|hYj3tZBiY4VGnXHUMhkAofCUuFEEdDQptvsmrfTm",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/mobil",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"mobil"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET MOBIL by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "62bc7cf4dacd1b186e060e99|hYj3tZBiY4VGnXHUMhkAofCUuFEEdDQptvsmrfTm",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/mobil/62bc6db2b2c2313e2b0ff845",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"mobil",
+								"62bc6db2b2c2313e2b0ff845"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET MOBIL?{mesin}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/mobil/search/diesel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"mobil",
+								"search",
+								"diesel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT MOBIL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "62bc7cf4dacd1b186e060e99|hYj3tZBiY4VGnXHUMhkAofCUuFEEdDQptvsmrfTm",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "mesin",
+									"value": "V(ENGINE)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/mobil/62bcdbaba2be24bfea08cb23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"mobil",
+								"62bcdbaba2be24bfea08cb23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE MOBIL",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/mobil/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"mobil",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "62bc6db2b2c2313e2b0ff845"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "62bcd988a2be24bfea08cb22|zDafou8xm6laKUm08WZHp4bqVRPzqashkCJBej2k",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "MOTOR",
+			"item": [
+				{
+					"name": "POST MOTOR",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "mesin",
+									"value": "aston",
+									"type": "text"
+								},
+								{
+									"key": "tipe_suspensi",
+									"value": "biasah aja",
+									"type": "text"
+								},
+								{
+									"key": "tipe_transmisi",
+									"value": "dd",
+									"type": "text"
+								},
+								{
+									"key": "tahun_keluaran",
+									"value": "1999-12-12",
+									"type": "text"
+								},
+								{
+									"key": "warna",
+									"value": "hitam",
+									"type": "text"
+								},
+								{
+									"key": "harga",
+									"value": "1000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/motor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"motor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET MOTOR by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "62bc7cf4dacd1b186e060e99|hYj3tZBiY4VGnXHUMhkAofCUuFEEdDQptvsmrfTm",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/motor/62bc7282b2c2313e2b0ff853",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"motor",
+								"62bc7282b2c2313e2b0ff853"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET MOTOR",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/motor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"motor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET MOTOR?{mesin}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/motor/search/aston",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"motor",
+								"search",
+								"aston"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT MOTOR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "harga",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/motor/62bcdcb3a2be24bfea08cb24",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"motor",
+								"62bcdcb3a2be24bfea08cb24"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE MOTOR",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/motor/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"motor",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "62bcdcb3a2be24bfea08cb24"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "62bcd988a2be24bfea08cb22|zDafou8xm6laKUm08WZHp4bqVRPzqashkCJBej2k",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "API REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "iko",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ikoafianando@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "ikoafianando",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "ikoafianando",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ikoafianando@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "ikoafianando",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST LOGOUT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "62bc7cbedacd1b186e060e98|m9ccSOTDKzp2BsCgZP6O50Lxcbvmx1TTdD6r0vl1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

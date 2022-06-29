@@ -21,6 +21,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
+Route::get('/mobil/search/{motor}', [MobilController::class, 'search']);
+Route::get('/motor/search/{motor}', [MotorController::class, 'search']);
+Route::get('/kendaraan/search/{tahun_keluaran}', [KendaraanController::class, 'search']);
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/logout', [AuthController::class, 'logout']);
